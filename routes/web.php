@@ -59,3 +59,7 @@ Route::post('admin/user/profile', [App\Http\Controllers\UserController::class,'p
 Route::get('admin/contact/index', [App\Http\Controllers\ContactController::class, 'index'])->name('contact.index');
 Route::get('admin/contact/show', [App\Http\Controllers\ContactController::class, 'show'])->name('contact.show');
 Route::delete('admin/contact/{contact}', [App\Http\Controllers\ContactController::class, 'destroy'])->name('contact.destroy');
+
+// setting
+Route::get('admin/setting', [App\Http\Controllers\SettingController::class, 'edit'])->name('setting.index');
+Route::post('admin/setting', [App\Http\Controllers\SettingController::class, 'update'])->name('setting.update');
